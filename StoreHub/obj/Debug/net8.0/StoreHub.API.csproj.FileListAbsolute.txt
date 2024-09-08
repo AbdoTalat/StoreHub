@@ -1,0 +1,7 @@
+C:\Users\ABDO.ABDOTALAT\Desktop\.Net\API\E-CommerceApp\StoreHub\obj\Debug\net8.0\StoreHub.API.csproj.AssemblyReference.cache
+C:\Users\ABDO.ABDOTALAT\Desktop\.Net\API\E-CommerceApp\StoreHub\obj\Debug\net8.0\StoreHub.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABDO.ABDOTALAT\Desktop\.Net\API\E-CommerceApp\StoreHub\obj\Debug\net8.0\StoreHub.API.AssemblyInfoInputs.cache
+C:\Users\ABDO.ABDOTALAT\Desktop\.Net\API\E-CommerceApp\StoreHub\obj\Debug\net8.0\StoreHub.API.AssemblyInfo.cs
+C:\Users\ABDO.ABDOTALAT\Desktop\.Net\API\E-CommerceApp\StoreHub\obj\Debug\net8.0\StoreHub.API.csproj.CoreCompileInputs.cache
+C:\Users\ABDO.ABDOTALAT\Desktop\.Net\API\E-CommerceApp\StoreHub\obj\Debug\net8.0\StoreHub.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ABDO.ABDOTALAT\Desktop\.Net\API\E-CommerceApp\StoreHub\obj\Debug\net8.0\StoreHub.API.MvcApplicationPartsAssemblyInfo.cache

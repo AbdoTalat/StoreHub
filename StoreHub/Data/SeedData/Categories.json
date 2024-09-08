@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "Electronics",
+    "Description": "Devices and gadgets including computers, phones, and accessories."
+  },
+  {
+    "Name": "Audio & Headphones",
+    "Description": "Audio equipment including headphones, speakers, and related accessories."
+  },
+  {
+    "Name": "Storage & Backup",
+    "Description": "External drives, USB flash drives, and other storage solutions."
+  },
+  {
+    "Name": "Monitors & Displays",
+    "Description": "Displays including monitors and screens for computers and other devices."
+  },
+  {
+    "Name": "Office Accessories",
+    "Description": "Office-related accessories like stands, chairs, and desk tools."
+  }
+]

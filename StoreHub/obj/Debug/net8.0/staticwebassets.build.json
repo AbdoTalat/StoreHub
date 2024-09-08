@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "gP3tiWbSmotigCki/GAaLmP1+M4zDa5QtsWnfHqnQ8I=",
+  "Source": "StoreHub",
+  "BasePath": "_content/StoreHub",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "StoreHub\\wwwroot",
+      "Source": "StoreHub",
+      "ContentRoot": "C:\\Users\\ABDO.ABDOTALAT\\Desktop\\.Net\\API\\E-CommerceApp\\StoreHub\\wwwroot\\",
+      "BasePath": "_content/StoreHub",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\ABDO.ABDOTALAT\\Desktop\\.Net\\API\\E-CommerceApp\\StoreHub\\wwwroot\\Images\\43569cf2-776d-43e2-b378-db2a3a2f2c66_c08220714.png",
+      "SourceId": "StoreHub",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ABDO.ABDOTALAT\\Desktop\\.Net\\API\\E-CommerceApp\\StoreHub\\wwwroot\\",
+      "BasePath": "_content/StoreHub",
+      "RelativePath": "Images/43569cf2-776d-43e2-b378-db2a3a2f2c66_c08220714.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\43569cf2-776d-43e2-b378-db2a3a2f2c66_c08220714.png"
+    },
+    {
+      "Identity": "C:\\Users\\ABDO.ABDOTALAT\\Desktop\\.Net\\API\\E-CommerceApp\\StoreHub\\wwwroot\\Images\\a3732cac-b7c5-4740-82e2-038cc2abfc7f_download.jpeg",
+      "SourceId": "StoreHub",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ABDO.ABDOTALAT\\Desktop\\.Net\\API\\E-CommerceApp\\StoreHub\\wwwroot\\",
+      "BasePath": "_content/StoreHub",
+      "RelativePath": "Images/a3732cac-b7c5-4740-82e2-038cc2abfc7f_download.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\a3732cac-b7c5-4740-82e2-038cc2abfc7f_download.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\ABDO.ABDOTALAT\\Desktop\\.Net\\API\\E-CommerceApp\\StoreHub\\wwwroot\\Images\\eebb9317-f628-4716-95f0-1aff23268646_c08220714.png",
+      "SourceId": "StoreHub",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ABDO.ABDOTALAT\\Desktop\\.Net\\API\\E-CommerceApp\\StoreHub\\wwwroot\\",
+      "BasePath": "_content/StoreHub",
+      "RelativePath": "Images/eebb9317-f628-4716-95f0-1aff23268646_c08220714.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\eebb9317-f628-4716-95f0-1aff23268646_c08220714.png"
+    }
+  ]
+}

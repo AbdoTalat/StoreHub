@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ABDO.ABDOTALAT\\Desktop\\.Net\\API\\E-CommerceApp\\StoreHub\\wwwroot\\Images\\43569cf2-776d-43e2-b378-db2a3a2f2c66_c08220714.png",
+      "PackagePath": "staticwebassets\\Images\\43569cf2-776d-43e2-b378-db2a3a2f2c66_c08220714.png"
+    },
+    {
+      "Id": "C:\\Users\\ABDO.ABDOTALAT\\Desktop\\.Net\\API\\E-CommerceApp\\StoreHub\\wwwroot\\Images\\a3732cac-b7c5-4740-82e2-038cc2abfc7f_download.jpeg",
+      "PackagePath": "staticwebassets\\Images\\a3732cac-b7c5-4740-82e2-038cc2abfc7f_download.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ABDO.ABDOTALAT\\Desktop\\.Net\\API\\E-CommerceApp\\StoreHub\\wwwroot\\Images\\eebb9317-f628-4716-95f0-1aff23268646_c08220714.png",
+      "PackagePath": "staticwebassets\\Images\\eebb9317-f628-4716-95f0-1aff23268646_c08220714.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.StoreHub.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.StoreHub.props",
+      "PackagePath": "build\\StoreHub.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.StoreHub.props",
+      "PackagePath": "buildMultiTargeting\\StoreHub.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.StoreHub.props",
+      "PackagePath": "buildTransitive\\StoreHub.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

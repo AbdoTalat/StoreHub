@@ -1,0 +1,186 @@
+[
+  {
+    "Name": "Wireless Mouse",
+    "Description": "A comfortable and ergonomic wireless mouse with a high-precision sensor.",
+    "Price": 29.99,
+    "StockQuantity": 150,
+    "ImageUrl": "https://example.com/images/wireless-mouse.jpg",
+    "CategoryId": 1
+  },
+  {
+    "Name": "Gaming Keyboard",
+    "Description": "A mechanical gaming keyboard with customizable RGB backlighting.",
+    "Price": 89.99,
+    "StockQuantity": 80,
+    "ImageUrl": "https://example.com/images/gaming-keyboard.jpg",
+    "CategoryId": 1
+  },
+  {
+    "Name": "Bluetooth Headphones",
+    "Description": "High-quality Bluetooth headphones with noise-canceling features.",
+    "Price": 119.99,
+    "StockQuantity": 60,
+    "ImageUrl": "https://example.com/images/bluetooth-headphones.jpg",
+    "CategoryId": 2
+  },
+  {
+    "Name": "USB Flash Drive 64GB",
+    "Description": "A compact USB flash drive with 64GB of storage.",
+    "Price": 15.99,
+    "StockQuantity": 200,
+    "ImageUrl": "https://example.com/images/usb-flash-drive.jpg",
+    "CategoryId": 3
+  },
+  {
+    "Name": "4K Monitor",
+    "Description": "A 27-inch 4K monitor with stunning image clarity and vibrant colors.",
+    "Price": 299.99,
+    "StockQuantity": 30,
+    "ImageUrl": "https://example.com/images/4k-monitor.jpg",
+    "CategoryId": 4
+  },
+  {
+    "Name": "Wireless Charger",
+    "Description": "A fast wireless charger compatible with most Qi-enabled devices.",
+    "Price": 25.99,
+    "StockQuantity": 100,
+    "ImageUrl": "https://example.com/images/wireless-charger.jpg",
+    "CategoryId": 1
+  },
+  {
+    "Name": "Laptop Stand",
+    "Description": "An adjustable laptop stand for ergonomic comfort and better airflow.",
+    "Price": 34.99,
+    "StockQuantity": 70,
+    "ImageUrl": "https://example.com/images/laptop-stand.jpg",
+    "CategoryId": 5
+  },
+  {
+    "Name": "Portable SSD 1TB",
+    "Description": "A rugged and fast portable SSD with 1TB of storage capacity.",
+    "Price": 199.99,
+    "StockQuantity": 40,
+    "ImageUrl": "https://example.com/images/portable-ssd.jpg",
+    "CategoryId": 3
+  },
+  {
+    "Name": "Smartphone Stand",
+    "Description": "A versatile smartphone stand with adjustable angles and a sturdy base.",
+    "Price": 19.99,
+    "StockQuantity": 120,
+    "ImageUrl": "https://example.com/images/smartphone-stand.jpg",
+    "CategoryId": 5
+  },
+  {
+    "Name": "HD Webcam",
+    "Description": "A high-definition webcam for clear video calls and streaming.",
+    "Price": 49.99,
+    "StockQuantity": 90,
+    "ImageUrl": "https://example.com/images/hd-webcam.jpg",
+    "CategoryId": 1
+  },
+  {
+    "Name": "External Hard Drive 2TB",
+    "Description": "A reliable external hard drive with 2TB of storage for backups and media.",
+    "Price": 89.99,
+    "StockQuantity": 50,
+    "ImageUrl": "https://example.com/images/external-hard-drive.jpg",
+    "CategoryId": 3
+  },
+  {
+    "Name": "Ergonomic Office Chair",
+    "Description": "A comfortable office chair with lumbar support and adjustable features.",
+    "Price": 229.99,
+    "StockQuantity": 25,
+    "ImageUrl": "https://example.com/images/office-chair.jpg",
+    "CategoryId": 5
+  },
+  {
+    "Name": "Action Camera",
+    "Description": "A compact action camera with 4K recording and waterproof casing.",
+    "Price": 149.99,
+    "StockQuantity": 45,
+    "ImageUrl": "https://example.com/images/action-camera.jpg",
+    "CategoryId": 1
+  },
+  {
+    "Name": "Fitness Tracker",
+    "Description": "A fitness tracker with heart rate monitoring and activity tracking features.",
+    "Price": 79.99,
+    "StockQuantity": 95,
+    "ImageUrl": "https://example.com/images/fitness-tracker.jpg",
+    "CategoryId": 1
+  },
+  {
+    "Name": "Electric Toothbrush",
+    "Description": "An electric toothbrush with multiple brushing modes and a long battery life.",
+    "Price": 39.99,
+    "StockQuantity": 110,
+    "ImageUrl": "https://example.com/images/electric-toothbrush.jpg",
+    "CategoryId": 1
+  },
+  {
+    "Name": "Air Purifier",
+    "Description": "An air purifier with HEPA filtration and a modern design for cleaner air.",
+    "Price": 179.99,
+    "StockQuantity": 35,
+    "ImageUrl": "https://example.com/images/air-purifier.jpg",
+    "CategoryId": 1
+  },
+  {
+    "Name": "Digital Camera",
+    "Description": "A digital camera with high resolution and advanced features for photography enthusiasts.",
+    "Price": 499.99,
+    "StockQuantity": 20,
+    "ImageUrl": "https://example.com/images/digital-camera.jpg",
+    "CategoryId": 1
+  },
+  {
+    "Name": "Gaming Mouse Pad",
+    "Description": "A large gaming mouse pad with a smooth surface and non-slip base.",
+    "Price": 22.99,
+    "StockQuantity": 140,
+    "ImageUrl": "https://example.com/images/gaming-mouse-pad.jpg",
+    "CategoryId": 1
+  },
+  {
+    "Name": "Desk Lamp",
+    "Description": "A modern desk lamp with adjustable brightness and a sleek design.",
+    "Price": 34.99,
+    "StockQuantity": 85,
+    "ImageUrl": "https://example.com/images/desk-lamp.jpg",
+    "CategoryId": 5
+  },
+  {
+    "Name": "Wireless Printer",
+    "Description": "A wireless printer with high-resolution printing and mobile compatibility.",
+    "Price": 129.99,
+    "StockQuantity": 40,
+    "ImageUrl": "https://example.com/images/wireless-printer.jpg",
+    "CategoryId": 1
+  },
+  {
+    "Name": "Smart Speaker",
+    "Description": "A smart speaker with voice control and high-quality sound.",
+    "Price": 89.99,
+    "StockQuantity": 70,
+    "ImageUrl": "https://example.com/images/smart-speaker.jpg",
+    "CategoryId": 2
+  },
+  {
+    "Name": "Portable Blender",
+    "Description": "A compact portable blender for making smoothies on the go.",
+    "Price": 39.99,
+    "StockQuantity": 90,
+    "ImageUrl": "https://example.com/images/portable-blender.jpg",
+    "CategoryId": 1
+  },
+  {
+    "Name": "Tablet Stand",
+    "Description": "An adjustable tablet stand for hands-free viewing and comfort.",
+    "Price": 27.99,
+    "StockQuantity": 110,
+    "ImageUrl": "https://example.com/images/tablet-stand.jpg",
+    "CategoryId": 5
+  }
+]
