@@ -31,7 +31,7 @@ namespace StoreHub.Models.Entities
         public int CategoryId { get; set; }
         public virtual Category? Category { get; set; }
 
-        //public virtual ICollection<CartItem> CartItems { get; set; } = new HashSet<CartItem>();
+        public virtual ICollection<CartItem> CartItems { get; set; } = new HashSet<CartItem>();
         public virtual ICollection<OrderItem> OrderItems { get; set; } = new HashSet<OrderItem>();
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using StoreHub.Core.Services.Interfaces;
+using StoreHub.Helpers;
 using System.Security.Claims;
 
 namespace StoreHub.Controllers
@@ -10,48 +11,26 @@ namespace StoreHub.Controllers
     [Authorize]
     public class PaymentController : ControllerBase
     {
-        private readonly IPaymentService1 _paymentService;
+        private readonly IPaymentService _paymentService;
 
-        public PaymentController(IPaymentService1 paymentService)
+        public PaymentController(IPaymentService paymentService)
         {
             _paymentService = paymentService;
         }
 
-        [HttpPost("create-payment-intent{orderId:int}/{paymentMethodId:alpha}")]
-        public async Task<IActionResult> CreatePaymentIntent([FromRoute]int orderId,[FromRoute] string paymentMethodId)
+        [HttpGet("Get-Payment-For-User")]
+        public async Task<IActionResult> GetPaymentByUserId()
         {
-            try
-            {
-                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                var clientSecret = await _paymentService.CreatePaymentIntentAsync(orderId, userId, paymentMethodId);
-                return Ok(new { ClientSecret = clientSecret });
-            }
-            catch (ArgumentException ex)
-            {
-                return BadRequest(new { Error = ex.Message });
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, new { Error = "An unexpected error occurred.", Details = ex.Message });
-            }
-        }
+            string? userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null)
+                return Unauthorized(new ApiErrorResponse(401));
 
-        [HttpPost("handle-payment-success")]
-        public async Task<IActionResult> HandlePaymentSuccess(string paymentIntentId, int paymentId)
-        {
-            try
-            {
-                await _paymentService.HandlePaymentSuccessAsync(paymentIntentId, paymentId);
-                return Ok(new { Message = "Payment processed successfully." });
-            }
-            catch (ArgumentException ex)
-            {
-                return BadRequest(new { Error = ex.Message });
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, new { Error = "An unexpected error occurred.", Details = ex.Message });
-            }
+            var payment = await _paymentService.GetPaymentByUserId(userId);
+
+            if (payment == null) 
+                return NotFound();
+
+            return Ok(payment);
         }
     }
 }

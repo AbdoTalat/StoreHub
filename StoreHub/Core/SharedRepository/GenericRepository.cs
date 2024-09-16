@@ -47,19 +47,33 @@ namespace StoreHub.Core.SharedRepository
             }
             return await query.ToListAsync();
         }
-        public async Task<T?> GetSingleWihtIncludeAsync(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includeProperties)
+        //public async Task<T?> GetSingleWihtIncludeAsync(Expression<Func<T, bool>> predicate,
+        //    params Expression<Func<T, object>>[] includeProperties)
+        //{
+        //    IQueryable<T> query = _dbSet;
+
+        //    foreach (var property in includeProperties)
+        //    {
+        //        query = query.Include(property);
+        //    }
+
+        //    return await query.FirstOrDefaultAsync(predicate);
+        //}
+
+        public async Task<T?> GetSingleWithIncludeAsync( Expression<Func<T, bool>> predicate,
+            Func<IQueryable<T>, IQueryable<T>> includeProperties)
         {
             IQueryable<T> query = _dbSet;
 
-            foreach (var property in includeProperties)
-            {
-                query = query.Include(property);
-            }
+            // Apply the include properties function, which includes both Include and ThenInclude
+            query = includeProperties(query);
 
             return await query.FirstOrDefaultAsync(predicate);
         }
         public async Task<T?> GetByIdAsync(int? Id)
             => await _dbSet.FindAsync(Id);
+
+
         public async Task<T?> AddNewAsync(T entity)
         {
             try

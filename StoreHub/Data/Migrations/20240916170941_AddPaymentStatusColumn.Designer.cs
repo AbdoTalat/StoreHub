@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StoreHub.Data.DbContext;
 
@@ -11,9 +12,11 @@ using StoreHub.Data.DbContext;
 namespace StoreHub.Data.Migrations
 {
     [DbContext(typeof(StoreHubContext))]
-    partial class StoreHubContextModelSnapshot : ModelSnapshot
+    [Migration("20240916170941_AddPaymentStatusColumn")]
+    partial class AddPaymentStatusColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

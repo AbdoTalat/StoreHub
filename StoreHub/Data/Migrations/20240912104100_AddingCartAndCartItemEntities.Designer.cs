@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StoreHub.Data.DbContext;
 
@@ -11,9 +12,11 @@ using StoreHub.Data.DbContext;
 namespace StoreHub.Data.Migrations
 {
     [DbContext(typeof(StoreHubContext))]
-    partial class StoreHubContextModelSnapshot : ModelSnapshot
+    [Migration("20240912104100_AddingCartAndCartItemEntities")]
+    partial class AddingCartAndCartItemEntities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -407,26 +410,22 @@ namespace StoreHub.Data.Migrations
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("Currency")
-                        .IsRequired()
+                    b.Property<string>("ErrorMessage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ExternalTransactionId")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("PaymentDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("PaymentIntentID")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("PaymentStatus")
+                    b.Property<int>("PaymentMethod")
                         .HasColumnType("int");
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<string>("PaymentStatus")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Payments");
                 });
@@ -542,13 +541,13 @@ namespace StoreHub.Data.Migrations
             modelBuilder.Entity("StoreHub.Models.Entities.CartItem", b =>
                 {
                     b.HasOne("StoreHub.Models.Entities.Cart", "Cart")
-                        .WithMany("CartItems")
+                        .WithMany()
                         .HasForeignKey("CartId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("StoreHub.Models.Entities.Product", "Product")
-                        .WithMany("CartItems")
+                        .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -600,15 +599,6 @@ namespace StoreHub.Data.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("StoreHub.Models.Entities.Payment", b =>
-                {
-                    b.HasOne("StoreHub.Models.Entities.ApplicationUser", "ApplicationUser")
-                        .WithMany()
-                        .HasForeignKey("UserId");
-
-                    b.Navigation("ApplicationUser");
-                });
-
             modelBuilder.Entity("StoreHub.Models.Entities.Product", b =>
                 {
                     b.HasOne("StoreHub.Models.Entities.Category", "Category")
@@ -625,11 +615,6 @@ namespace StoreHub.Data.Migrations
                     b.Navigation("Orders");
                 });
 
-            modelBuilder.Entity("StoreHub.Models.Entities.Cart", b =>
-                {
-                    b.Navigation("CartItems");
-                });
-
             modelBuilder.Entity("StoreHub.Models.Entities.Category", b =>
                 {
                     b.Navigation("Products");
@@ -642,8 +627,6 @@ namespace StoreHub.Data.Migrations
 
             modelBuilder.Entity("StoreHub.Models.Entities.Product", b =>
                 {
-                    b.Navigation("CartItems");
-
                     b.Navigation("OrderItems");
                 });
 #pragma warning restore 612, 618

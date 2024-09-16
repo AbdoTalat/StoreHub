@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using StoreHub.Core.Services.Interfaces;
 using StoreHub.Data.DbContext;
 using StoreHub.Models.DTOs;
@@ -11,13 +12,11 @@ namespace StoreHub.Core.Services.Implementation
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper mapper;
-        private readonly StoreHubContext context;
 
-        public CategoryService(IUnitOfWork unitOfWork, IMapper _mapper, StoreHubContext context)
+        public CategoryService(IUnitOfWork unitOfWork, IMapper _mapper)
         {
             _unitOfWork = unitOfWork;
             mapper = _mapper;
-            this.context = context;
         }
 
         public Task<IEnumerable<Category>> GetAllCategoriesAsync()
@@ -27,7 +26,7 @@ namespace StoreHub.Core.Services.Implementation
             => _unitOfWork.Repository<Category>().GetByIdAsync(Id);
         public async Task<CategoryToReturnDTO?> GetCategoryByIdWithProductsAsync(int Id)
         {
-            var category = await _unitOfWork.Repository<Category>().GetSingleWihtIncludeAsync(c => c.ID == Id, c => c.Products);
+            var category = await _unitOfWork.Repository<Category>().GetSingleWithIncludeAsync(c => c.ID == Id, query => query.Include(c =>c.Products));
             if (category == null)
                 return null;
 

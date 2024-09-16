@@ -29,7 +29,7 @@ namespace StoreHub.Core.Services.Implementation
 
         public async Task<ProductToReturnDTO?> GetProductByIdAsync(int? Id)
         {
-            var product = await _unitOfWork.Repository<Product>().GetSingleWihtIncludeAsync(p => p.ID == Id, p => p.Category);
+            var product = await _unitOfWork.Repository<Product>().GetSingleWithIncludeAsync(p => p.ID == Id, query => query.Include(p => p.Category));
 
             return mapper.Map<ProductToReturnDTO>(product);
         }

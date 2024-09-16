@@ -14,12 +14,6 @@ namespace StoreHub.Models.DTOs
     {
         public int Quantity { get; set; }
         public decimal TotalPrice { get; set; }
-        public productDataDTO productDataDTO { get; set; }
-    }
-    public class productDataDTO
-    {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public decimal Price { get; set; }
+        public ProductsData productDataDTO { get; set; }
     }
 }

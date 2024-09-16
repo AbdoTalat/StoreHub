@@ -34,34 +34,29 @@ namespace StoreHub.Controllers
             return Ok(orders);
         }
 
-        [HttpPost("Add-New-Order")]
-        public async Task<IActionResult> AddNewOrder([FromBody]OrderToInsertDTO orderDTO)
+        [HttpPost("CheckOut")]
+        public async Task<IActionResult> CheckOut()
         {
             try
             {
-                if (!ModelState.IsValid)
-                {
-                    var errors = ModelState.GetModelStateErrors();
-                    return BadRequest(new { Errors = errors });
-                }
-
                 var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                if (userId == null)
-                    return Unauthorized(new ApiErrorResponse(401));
 
-                var Order = await orderService.AddNewOrderAsync(orderDTO, userId);
-                if (Order == null)
-                    return StatusCode(500,new ApiErrorResponse(500));
+                bool isSuccess = await orderService.CheckoutAsync(userId);
 
-                return Ok(Order);
+                if (!isSuccess)
+                    return BadRequest("CheckOut Failed");
+
+                return Ok("CheckOut Successful");
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
+
         }
 
-        [HttpDelete("Delete-User-By{OrderId:int}")]
+
+        [HttpDelete("Delete-Order-By-ID{OrderId:int}")]
         public async Task<IActionResult> DeleteOrder([FromRoute] int OrderId)
         {
             try
@@ -69,10 +64,6 @@ namespace StoreHub.Controllers
                 var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 if (userId == null)
                     return Unauthorized(new ApiErrorResponse(401));
-
-
-                //if (!await orderService.isOrderOwnedByUser(Id, userId))
-                //    return BadRequest(new ApiErrorResponse(400));
 
                 bool isDeleted = await orderService.DeleteOrderAsync(OrderId);
                 if (!isDeleted)

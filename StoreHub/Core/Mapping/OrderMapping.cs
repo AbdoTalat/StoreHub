@@ -14,18 +14,7 @@ namespace StoreHub.Core.Mapping
             CreateMap<OrderItem, orderItemsDTO>()
                 .ForMember(dest => dest.productDataDTO, opt => opt.MapFrom(src => src.Product));
 
-            CreateMap<Product, productDataDTO>();
-
-
-
-            CreateMap<OrderToInsertDTO, Order>()
-                .ForMember(dest => dest.OrderItems, opt => opt.Ignore())
-                .ForMember(dest => dest.AddressId, opt => opt.Ignore())
-                .ForMember(dest => dest.OrderItems, opt => opt.Ignore());
-
-
-            CreateMap<OrderItemDTO, OrderItem>()
-                .ForMember(dest => dest.TotalPrice, opt => opt.Ignore());
+            CreateMap<Product, ProductsData>();
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "O4fWMsCfnxs=",
+  "dgSpecHash": "T7GBVTmNz4g=",
   "success": true,
   "projectFilePath": "C:\\Users\\ABDO.ABDOTALAT\\Desktop\\.Net\\API\\E-CommerceApp\\StoreHub\\StoreHub.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,8 @@
     "C:\\Users\\ABDO.ABDOTALAT\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\ABDO.ABDOTALAT\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\ABDO.ABDOTALAT\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\ABDO.ABDOTALAT\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "C:\\Users\\ABDO.ABDOTALAT\\.nuget\\packages\\stackexchange.redis\\2.8.16\\stackexchange.redis.2.8.16.nupkg.sha512",
     "C:\\Users\\ABDO.ABDOTALAT\\.nuget\\packages\\stripe.net\\45.10.0\\stripe.net.45.10.0.nupkg.sha512",
     "C:\\Users\\ABDO.ABDOTALAT\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\ABDO.ABDOTALAT\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",

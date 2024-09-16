@@ -152,3 +152,5 @@ C:\Users\ABDO.ABDOTALAT\Desktop\.Net\API\E-CommerceApp\StoreHub\bin\Debug\net8.0
 C:\Users\ABDO.ABDOTALAT\Desktop\.Net\API\E-CommerceApp\StoreHub\bin\Debug\net8.0\Data\SeedData\Categories.json
 C:\Users\ABDO.ABDOTALAT\Desktop\.Net\API\E-CommerceApp\StoreHub\bin\Debug\net8.0\Data\SeedData\Products.json
 C:\Users\ABDO.ABDOTALAT\Desktop\.Net\API\E-CommerceApp\StoreHub\bin\Debug\net8.0\Data\SeedData\Roles.json
+C:\Users\ABDO.ABDOTALAT\Desktop\.Net\API\E-CommerceApp\StoreHub\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\ABDO.ABDOTALAT\Desktop\.Net\API\E-CommerceApp\StoreHub\bin\Debug\net8.0\StackExchange.Redis.dll

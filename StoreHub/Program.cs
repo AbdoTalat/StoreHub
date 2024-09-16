@@ -27,7 +27,6 @@ public class Program
         builder.Services.AddSwaggerGen();
 
 
-        //Configure The ConnectionString
         builder.Services.AddDbContext<StoreHubContext>(options =>
         {
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultString"));
@@ -59,14 +58,16 @@ public class Program
         builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         builder.Services.AddScoped<IUserRepository, UserRepository>();
         builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
+        builder.Services.AddScoped<ICartRepository, CartRepository>();
 
         builder.Services.AddScoped<ICategoryService, CategoryService>();
         builder.Services.AddScoped<IProductService, ProductService>();
         builder.Services.AddScoped<IOrderService, OrderService>();
         builder.Services.AddScoped<IUserService, UserService>();
+        builder.Services.AddScoped<IPaymentService, PaymentService>();
         builder.Services.AddScoped<ITokenService, TokenService>();
         builder.Services.AddScoped<IImageService, ImageService>();
-        builder.Services.AddScoped<IPaymentService1, PaymentService1>();
+        builder.Services.AddScoped<ICartService, CartService>();
 
         builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
         

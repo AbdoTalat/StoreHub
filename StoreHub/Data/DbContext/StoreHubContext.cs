@@ -14,8 +14,8 @@ namespace StoreHub.Data.DbContext
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderItem> OrderItems { get; set; }
-        //public virtual DbSet<Cart> Carts { get; set; }
-        //public virtual DbSet<CartItem> CartItems { get; set; }
+        public virtual DbSet<Cart> Carts { get; set; }
+        public virtual DbSet<CartItem> CartItems { get; set; }
         public virtual DbSet<Address> Addresses { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
 
@@ -23,5 +23,7 @@ namespace StoreHub.Data.DbContext
         {
             base.OnModelCreating(builder);
         }
+
+
     }
 }
