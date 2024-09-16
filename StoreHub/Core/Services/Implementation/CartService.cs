@@ -8,13 +8,6 @@ using StoreHub.UnitOfWork;
 using Stripe;
 using System.Configuration;
 
-public class StripeConfiguration11
-{
-    public static void Configure()
-    {
-        StripeConfiguration.ApiKey  = "sk_test_51PvgCbRpeHss5rPypZMOBaRdyxNSkYwWSsCBqcD4kx8tCQoLDksqj6aFhanPJfPfAx1duu4efWg5l6eujXb7yvml00O04Ai68l";
-    }
-}
 public class CartService : ICartService
 {
     private readonly IUnitOfWork _unitOfWork;
@@ -26,7 +19,6 @@ public class CartService : ICartService
         _unitOfWork = unitOfWork;
         _mapper = mapper;
         _cartRepository = cartRepository;
-        StripeConfiguration11.Configure();
     }
 
     public async Task<CartToReturnDTO?> GetCartByUserIdAsync(string userId)
@@ -117,5 +109,6 @@ public class CartService : ICartService
 
     public decimal CalculateTotalPrice(IEnumerable<CartItem> cartItems)
         => cartItems.Sum(ci => ci.SubTotal);
+    
 
 }

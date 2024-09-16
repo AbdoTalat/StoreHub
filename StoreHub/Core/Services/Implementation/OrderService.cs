@@ -10,6 +10,13 @@ using Stripe;
 
 namespace StoreHub.Core.Services.Implementation
 {
+    public class StripeConfiguration11
+    {
+        public static void Configure()
+        {
+            StripeConfiguration.ApiKey = "sk_test_51PvgCbRpeHss5rPypZMOBaRdyxNSkYwWSsCBqcD4kx8tCQoLDksqj6aFhanPJfPfAx1duu4efWg5l6eujXb7yvml00O04Ai68l";
+        }
+    }
     public class OrderService : IOrderService
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -23,6 +30,7 @@ namespace StoreHub.Core.Services.Implementation
             _mapper = mapper;
             _cartRepository = cartRepository;
             _paymentService = paymentService;
+            StripeConfiguration11.Configure();
         }
 
         public async Task<IEnumerable<OrdersToReturnDTO>?> GetOrdersbyUserIdAsync(string userId)
@@ -117,4 +125,6 @@ namespace StoreHub.Core.Services.Implementation
             return order;
         }
     }
+
+
 }

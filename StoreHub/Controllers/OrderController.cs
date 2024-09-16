@@ -40,6 +40,8 @@ namespace StoreHub.Controllers
             try
             {
                 var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (userId == null)
+                    return Unauthorized(new ApiErrorResponse(401));
 
                 bool isSuccess = await orderService.CheckoutAsync(userId);
 
